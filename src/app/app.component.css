@@ -1,0 +1,23 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: linear-gradient(to-right, #000428, #004e92);
+}
+
+.container{
+    background: linear-gradient( to-right, #000428, #004e92);
+}
+
+.titulo-h1{
+    margin: 20px auto;
+    color: #004e92;
+}
+
+.formulario{
+    padding: 20px;
+    background: linear-gradient(to-right, #000428, #004e92);
+    font-family: 'Times New Roman', Times, serif;
+}

@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+}
+
+body{
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,92,1) 20%, rgba(93,56,130,1) 55%, rgba(86,67,139,1) 100%, rgba(0,212,255,1) 100%);;
+}
+
+
+.titulo-h1{
+    margin: 10px auto;
+    color: #fff;
+    text-align: center;
+}
+
+.formulario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    padding: 20px;
+    background: linear-gradient(to right, #000428, #045967);
+}
+
+form button{
+    margin: 20px 0;
+
+}
+
+form label{
+    margin: 19px 0;
+    color: #fff;
+}
