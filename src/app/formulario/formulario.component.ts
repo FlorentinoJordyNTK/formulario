@@ -46,16 +46,16 @@ export class FormularioComponent implements OnInit {
 		{ name: 'México', estados: [ {name: 'D', ciudades: ['CDMX', 'Queretaro', 'Toluca', 'Puebla', 'Monterrey']} ] },
 	];
   
-	estados: Array<any> = []; //Angular 11
+	estados: Array<any> = [];
 
-	ciudades: Array<any> = []; //Angular 11
+	ciudades: Array<any> = [];
 	
-	cambiarPais(pais: any) { //Angular 11
-		this.estados = this.Paises.find((cntry: any) => cntry.name == pais.target.value).estados; //Angular 11
+	cambiarPais(pais: any) {
+		this.estados = this.Paises.find((cntry: any) => cntry.name == pais.target.value).estados;
 	}
 
-	cambiarEstado(state: any) { //Angular 11
-		this.ciudades = this.Paises.find((cntry: any) => cntry.name == this.seleccionarPais).estados.find((stat: any) => stat.name == state.target.value).ciudades; //Angular 11
+	cambiarEstado(state: any) {
+		this.ciudades = this.Paises.find((cntry: any) => cntry.name == this.seleccionarPais).estados.find((stat: any) => stat.name == state.target.value).ciudades;
 	}
 
 }

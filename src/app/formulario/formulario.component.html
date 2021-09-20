@@ -30,13 +30,6 @@
                     <option>Seleccionar Pais</option>
                     <option *ngFor="let country of Paises">{{country.name}}</option>
                 </select>
-                <!-- <select class="form-select" id="pais" formControlName="pais">
-                    <option value="no">Selecciona alguna opción</option>
-                    <option value="AL">Albania</option>
-                    <option value="GT">Guatemala</option>
-                    <option value="MX">México</option>
-                    <option value="NI">Nicaragua</option>
-                </select> -->
             </div>
             <div class="col-md-12 col-sm-12">
                 <label for="estado" class="form-label">Estado de la República</label>
@@ -44,41 +37,7 @@
                     <option>Seleccionar Estado</option>
                     <option *ngFor="let estados of estados">{{estados.name}}</option>
                 </select>
-                <!-- <select class="form-select" id="estado" formControlName="estado">
-                    <option value="no">Selecciona alguna opción</option>
-                    <option value="Aguascalientes">Aguascalientes</option>
-                    <option value="Baja California">Baja California</option>
-                    <option value="Baja California Sur">Baja California Sur</option>
-                    <option value="Campeche">Campeche</option>
-                    <option value="Chiapas">Chiapas</option>
-                    <option value="Chihuahua">Chihuahua</option>
-                    <option value="CDMX">Ciudad de México</option>
-                    <option value="Coahuila">Coahuila</option>
-                    <option value="Colima">Colima</option>
-                    <option value="Durango">Durango</option>
-                    <option value="Estado de México">Estado de México</option>
-                    <option value="Guanajuato">Guanajuato</option>
-                    <option value="Guerrero">Guerrero</option>
-                    <option value="Hidalgo">Hidalgo</option>
-                    <option value="Jalisco">Jalisco</option>
-                    <option value="Michoacán">Michoacán</option>
-                    <option value="Morelos">Morelos</option>
-                    <option value="Nayarit">Nayarit</option>
-                    <option value="Nuevo León">Nuevo León</option>
-                    <option value="Oaxaca">Oaxaca</option>
-                    <option value="Puebla">Puebla</option>
-                    <option value="Querétaro">Querétaro</option>
-                    <option value="Quintana Roo">Quintana Roo</option>
-                    <option value="San Luis Potosí">San Luis Potosí</option>
-                    <option value="Sinaloa">Sinaloa</option>
-                    <option value="Sonora">Sonora</option>
-                    <option value="Tabasco">Tabasco</option>
-                    <option value="Tamaulipas">Tamaulipas</option>
-                    <option value="Tlaxcala">Tlaxcala</option>
-                    <option value="Veracruz">Veracruz</option>
-                    <option value="Yucatán">Yucatán</option>
-                    <option value="Zacatecas">Zacatecas</option>
-                </select> -->
+                    
             </div>
 
             <div class="col-md-12 col-sm-12">
@@ -91,30 +50,5 @@
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Enviar</button>
             </div>
-        </form><div class="content">
-            
- <!--            <div class="card-container">
-                <label>Pais</label>
-                <select placeholder="Pais" [(ngModel)]="seleccionarPais" (change)="cambiarPais($event)">
-                    <option>Seleccionar Pais</option>
-                    <option *ngFor="let pais of Paises">{{pais.name}}</option>
-                </select>
-            </div>
-        
-            <div class="card-container">
-                <label>Estado</label>
-                <select placeholder="Estado" (change)="cambiarEstado($event)">
-                    <option>Seleccionar Estado</option>
-                    <option *ngFor="let estados of estados">{{estados.name}}</option>
-                </select>
-            </div>
-            
-            <div class="card-container">
-                <label>Ciudad</label>
-                <select placeholder="Ciudad">
-                    <option>Seleccionar Ciudad</option>
-                    <option *ngFor="let city of ciudades">{{city}}</option>
-                </select>
-            </div>
-        </div> -->
+        </form>            
     </div>
