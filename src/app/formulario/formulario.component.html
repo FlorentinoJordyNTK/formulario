@@ -1,19 +1,19 @@
 <div class="container principal">
     <h1 class="titulo-h1">Formulario Nomitek</h1>
-    <form class="formulario row">
+    <form [formGroup]="form" (ngSubmit)="submit()" class="row" (ngSubmit)="submit()">
         <div class="col-md-6 col-sm-12">
             <label for="nombre" class="form-label">Nombre Completo</label>
-            <input id="nombre" type="text" class="form-control" placeholder="Nombre">
+            <input id="nombre" type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
         </div>
+
         <div class="col-md-6 col-sm-12">
             <label for="apellidos" class="form-label">Apellidos</label>
-            <input id="apellidos" type="text" class="form-control" placeholder="Apellidos">
+            <input id="apellidos" type="text" class="form-control" formControlName="apellidos" placeholder="Apellidos">
         </div>
 
         <div class="col-md-12 col-sm-12">
             <label for="genero" class="form-label">Genéro</label>
-            <label for="genero" class="form-label">Género</label>
-            <select class="form-select" id="genero" required>
+            <select class="form-select" id="genero" formControlName="genero">
                 <option selected disabled value="">Selecciona un género</option>
                 <option> Hombre </option>
                 <option> Mujer </option>
@@ -22,21 +22,29 @@
             </div>
             <div class="col-md-12 col-sm-12">
                 <label for="direccion" class="form-label">Dirección</label>
-                <input  id="direccion" type="text" class="form-control" placeholder="Dirección">
+                <input  id="direccion" type="text" class="form-control" formControlName="direccion" placeholder="Dirección">
             </div>
             <div class="col-md-12 col-sm-12">
                 <label for="pais" class="form-label">País</label>
-                <select class="form-select" id="pais">
+                <select class="form-select" placeholder="Pais" [(ngModel)]="seleccionarPais" (change)="cambiarPais($event)" formControlName="pais">
+                    <option>Seleccionar Pais</option>
+                    <option *ngFor="let country of Paises">{{country.name}}</option>
+                </select>
+                <!-- <select class="form-select" id="pais" formControlName="pais">
                     <option value="no">Selecciona alguna opción</option>
                     <option value="AL">Albania</option>
                     <option value="GT">Guatemala</option>
                     <option value="MX">México</option>
                     <option value="NI">Nicaragua</option>
-                </select>
+                </select> -->
             </div>
             <div class="col-md-12 col-sm-12">
                 <label for="estado" class="form-label">Estado de la República</label>
-                <select class="form-select" id="estado">
+                <select class="form-select" placeholder="Estado" (change)="cambiarEstado($event)" formControlName="estado">
+                    <option>Seleccionar Estado</option>
+                    <option *ngFor="let estados of estados">{{estados.name}}</option>
+                </select>
+                <!-- <select class="form-select" id="estado" formControlName="estado">
                     <option value="no">Selecciona alguna opción</option>
                     <option value="Aguascalientes">Aguascalientes</option>
                     <option value="Baja California">Baja California</option>
@@ -70,11 +78,43 @@
                     <option value="Veracruz">Veracruz</option>
                     <option value="Yucatán">Yucatán</option>
                     <option value="Zacatecas">Zacatecas</option>
+                </select> -->
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                <label for="ciudad" class="form-label">Ciudad de la República</label>
+                <select class="form-select" placeholder="Ciudad" formControlName="estado">
+                    <option>Seleccionar Ciudad</option>
+                    <option *ngFor="let city of ciudades">{{city}}</option>
                 </select>
             </div>
-            <div class="col-12">
-                <button id="enviar" class="btn btn-primary" disabled>Enviar</button>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Enviar</button>
             </div>
-        </form>
+        </form><div class="content">
+            
+ <!--            <div class="card-container">
+                <label>Pais</label>
+                <select placeholder="Pais" [(ngModel)]="seleccionarPais" (change)="cambiarPais($event)">
+                    <option>Seleccionar Pais</option>
+                    <option *ngFor="let pais of Paises">{{pais.name}}</option>
+                </select>
+            </div>
+        
+            <div class="card-container">
+                <label>Estado</label>
+                <select placeholder="Estado" (change)="cambiarEstado($event)">
+                    <option>Seleccionar Estado</option>
+                    <option *ngFor="let estados of estados">{{estados.name}}</option>
+                </select>
+            </div>
+            
+            <div class="card-container">
+                <label>Ciudad</label>
+                <select placeholder="Ciudad">
+                    <option>Seleccionar Ciudad</option>
+                    <option *ngFor="let city of ciudades">{{city}}</option>
+                </select>
+            </div>
+        </div> -->
     </div>
- 
