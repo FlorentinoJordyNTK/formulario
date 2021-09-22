@@ -35,20 +35,20 @@
                 <label for="estado" class="form-label">Estado de la República</label>
                 <select class="form-select" placeholder="Estado" (change)="cambiarEstado($event)" formControlName="estado">
                     <option>Seleccionar Estado</option>
-                    <option *ngFor="let estados of estados">{{estados.name}}</option>
+                    <option *ngFor="let estados of estados">{{estados}}</option>
                 </select>
                     
             </div>
 
-            <div class="col-md-12 col-sm-12">
+            <!-- <div class="col-md-12 col-sm-12">
                 <label for="ciudad" class="form-label">Ciudad de la República</label>
                 <select class="form-select" placeholder="Ciudad" formControlName="estado">
                     <option>Seleccionar Ciudad</option>
                     <option *ngFor="let city of ciudades">{{city}}</option>
                 </select>
-            </div>
+            </div> -->
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Enviar</button>
+                <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Enviar</button>
             </div>
-        </form>            
+        </form>   
     </div>

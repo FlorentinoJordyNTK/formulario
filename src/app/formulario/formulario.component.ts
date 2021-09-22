@@ -51,7 +51,7 @@ export class FormularioComponent implements OnInit {
 	ciudades: Array<any> = [];
 	
 	cambiarPais(pais: any) {
-		this.estados = this.Paises.find((cntry: any) => cntry.name == pais.target.value).estados;
+		this.estados = this.Paises.find((cntry: any) => cntry.name == pais.target.value).estados[0].ciudades;
 	}
 
 	cambiarEstado(state: any) {
