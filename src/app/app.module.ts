@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { TestComponent } from './test/test.component';
+import { LoginComponent } from './login/login.component';
 
 const router: Routes = [
   {
@@ -17,6 +18,10 @@ const router: Routes = [
   {
     path: 'formulario',
     component: FormularioComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
@@ -24,7 +29,8 @@ const router: Routes = [
   declarations: [
     AppComponent,
     FormularioComponent,
-    TestComponent
+    TestComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
