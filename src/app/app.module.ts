@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { TestComponent } from './test/test.component';
 import { LoginComponent } from './login/login.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { RegisterComponent } from './register/register.component';
 
 const router: Routes = [
   {
@@ -22,6 +24,14 @@ const router: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'gallery',
+    component: GalleryComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   }
 ];
 
@@ -30,7 +40,9 @@ const router: Routes = [
     AppComponent,
     FormularioComponent,
     TestComponent,
-    LoginComponent
+    LoginComponent,
+    GalleryComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
