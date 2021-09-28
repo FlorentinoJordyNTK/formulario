@@ -5,12 +5,10 @@
             <label for="nombre" class="form-label">Nombre Completo</label>
             <input id="nombre" type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
         </div>
-
         <div class="col-md-6 col-sm-12">
             <label for="apellidos" class="form-label">Apellidos</label>
             <input id="apellidos" type="text" class="form-control" formControlName="apellidos" placeholder="Apellidos">
         </div>
-
         <div class="col-md-12 col-sm-12">
             <label for="genero" class="form-label">Genéro</label>
             <select class="form-select" id="genero" formControlName="genero">
@@ -36,8 +34,7 @@
                 <select class="form-select" placeholder="Estado" (change)="cambiarEstado($event)" formControlName="estado">
                     <option>Seleccionar Estado</option>
                     <option *ngFor="let estados of estados">{{estados}}</option>
-                </select>
-                    
+                </select>  
             </div>
 
             <!-- <div class="col-md-12 col-sm-12">
@@ -47,9 +44,8 @@
                     <option *ngFor="let city of ciudades">{{city}}</option>
                 </select>
             </div> -->
-            
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Enviar</button>
-            </div>
-        </form>   
-    </div>
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Enviar</button>
+        </div>
+    </form>   
+</div>
