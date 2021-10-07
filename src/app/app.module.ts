@@ -11,6 +11,8 @@ import { TestComponent } from './test/test.component';
 import { LoginComponent } from './login/login.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegisterComponent } from './register/register.component';
+import { AdminComponent } from './admin/admin.component';
+import { AuthComponent } from './auth/auth.component';
 
 const router: Routes = [
   {
@@ -42,7 +44,9 @@ const router: Routes = [
     TestComponent,
     LoginComponent,
     GalleryComponent,
-    RegisterComponent
+    RegisterComponent,
+    AdminComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
