@@ -11,7 +11,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router, privateformBuilder: FormBuilder) { }cd 
+  constructor(private authService: AuthService, private router: Router, privateformBuilder: FormBuilder) { }
 
  /*  authForm: FormGroup;
   isSubmitted  =  false; */
